@@ -1,0 +1,20 @@
+# Ignore artifacts:
+build
+coverage
+
+dist/
+**/node_modules
+public/
+.vscode/
+
+.env
+.env.*
+
+**/.git
+*.config.js
+
+package.json
+pnpm-lock.yaml
+
+# Ignore eslint cache (optional)
+.eslintcache
