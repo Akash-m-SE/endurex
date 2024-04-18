@@ -11,7 +11,7 @@ public/
 .env.*
 
 **/.git
-*.config.js
+# *.config.js
 
 package.json
 pnpm-lock.yaml

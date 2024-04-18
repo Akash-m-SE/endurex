@@ -44,31 +44,32 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
   };
 
   return (
-    <Stack alignItems="center" mt="37px" justifyContent="center" p="20px">
+    <Stack alignItems="center" justifyContent="center" mt="37px" p="20px">
       <Typography
         fontWeight={700}
-        sx={{ fontSize: { lg: "44px", xs: "30px" } }}
         mb="49px"
+        sx={{ fontSize: { lg: "44px", xs: "30px" } }}
         textAlign="center"
       >
         Awesome Exercises You <br /> Should Know
       </Typography>
-      <Box position="relative" mb="72px">
+      <Box mb="72px" position="relative">
         <TextField
           height="76px"
+          onChange={(e) => setSearch(e.target.value.toLowerCase())}
+          placeholder="Search Exercises"
           sx={{
             input: { fontWeight: "700", border: "none", borderRadius: "4px" },
             width: { lg: "1170px", xs: "350px" },
             backgroundColor: "#fff",
             borderRadius: "40px",
           }}
-          value={search}
-          onChange={(e) => setSearch(e.target.value.toLowerCase())}
-          placeholder="Search Exercises"
           type="text"
+          value={search}
         />
         <Button
           className="search-btn"
+          onClick={handleSearch}
           sx={{
             bgcolor: "#FF2625",
             color: "#fff",
@@ -79,7 +80,6 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
             right: "0px",
             fontSize: { lg: "20px", xs: "14px" },
           }}
-          onClick={handleSearch}
         >
           Search
         </Button>
@@ -87,10 +87,10 @@ const SearchExercises = ({ setExercises, bodyPart, setBodyPart }) => {
 
       <Box sx={{ position: "relative", width: "100%", p: "20px" }}>
         <HorizontalScrollbar
-          data={bodyParts}
-          bodyParts
-          setBodyPart={setBodyPart}
           bodyPart={bodyPart}
+          bodyParts
+          data={bodyParts}
+          setBodyPart={setBodyPart}
         />
       </Box>
     </Stack>

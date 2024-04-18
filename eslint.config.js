@@ -10,7 +10,10 @@ export default [
     files: ["**/*.{js,jsx}"],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
       parserOptions: {
         ecmaVersion: "latest",
         ecmaFeatures: { jsx: true },
@@ -37,10 +40,6 @@ export default [
       "no-unused-vars": "off",
       "react/prop-types": "off",
       "react-hooks/exhaustive-deps": "off",
-    },
-    env: {
-      browser: true,
-      node: true,
     },
   },
 ];

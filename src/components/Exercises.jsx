@@ -49,34 +49,34 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   if (!currentExercises.length) return <Loader />;
 
   return (
-    <Box id="exercises" sx={{ mt: { lg: "109px" } }} mt="50px" p="20px">
+    <Box id="exercises" mt="50px" p="20px" sx={{ mt: { lg: "109px" } }}>
       <Typography
-        variant="h4"
         fontWeight="bold"
-        sx={{ fontSize: { lg: "44px", xs: "30px" } }}
         mb="46px"
+        sx={{ fontSize: { lg: "44px", xs: "30px" } }}
+        variant="h4"
       >
         Showing Results
       </Typography>
       <Stack
         direction="row"
-        sx={{ gap: { lg: "107px", xs: "50px" } }}
         flexWrap="wrap"
         justifyContent="center"
+        sx={{ gap: { lg: "107px", xs: "50px" } }}
       >
         {currentExercises.map((exercise, idx) => (
-          <ExerciseCard key={idx} exercise={exercise} />
+          <ExerciseCard exercise={exercise} key={idx} />
         ))}
       </Stack>
-      <Stack sx={{ mt: { lg: "114px", xs: "70px" } }} alignItems="center">
+      <Stack alignItems="center" sx={{ mt: { lg: "114px", xs: "70px" } }}>
         {exercises.length > 9 && (
           <Pagination
             color="standard"
-            shape="rounded"
-            defaultPage={1}
             count={Math.ceil(exercises.length / exercisesPerPage)}
-            page={currentPage}
+            defaultPage={1}
             onChange={paginate}
+            page={currentPage}
+            shape="rounded"
             size="large"
           />
         )}

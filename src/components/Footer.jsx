@@ -3,22 +3,23 @@ import { Box, Stack, Typography } from "@mui/material";
 import Logo from "../assets/images/gym-logo.png";
 
 const Footer = () => (
-  <Box mt="80px" bgcolor="#FFF3F4">
+  <Box bgcolor="#FFF3F4" mt="80px">
     <Stack
-      gap="40px"
-      sx={{ alignItems: "center" }}
       flexWrap="wrap"
-      px="40px"
+      gap="40px"
       pt="24px"
+      px="40px"
+      sx={{ alignItems: "center" }}
     >
-      <img src={Logo} alt="logo" style={{ width: "100px", height: "100px" }} />
+      <img alt="logo" src={Logo} style={{ width: "100px", height: "100px" }} />
     </Stack>
+
     <Typography
-      variant="h5"
-      sx={{ fontSize: { lg: "28px", xs: "20px" } }}
       mt="41px"
-      textAlign="center"
       pb="40px"
+      sx={{ fontSize: { lg: "28px", xs: "20px" } }}
+      textAlign="center"
+      variant="h5"
     >
       Made with ❤️
     </Typography>
