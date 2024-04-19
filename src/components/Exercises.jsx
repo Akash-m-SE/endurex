@@ -35,6 +35,9 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
   // Pagination
   const indexOfLastExercise = currentPage * exercisesPerPage;
   const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
+
+  console.log("exercises = ", exercises);
+
   const currentExercises = exercises.slice(
     indexOfFirstExercise,
     indexOfLastExercise

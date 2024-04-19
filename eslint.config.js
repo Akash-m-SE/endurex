@@ -36,7 +36,7 @@ export default [
         "warn",
         { allowConstantExport: true },
       ],
-      "react/jsx-sort-props": "error",
+      "react/jsx-sort-props": "off",
       "no-unused-vars": "off",
       "react/prop-types": "off",
       "react-hooks/exhaustive-deps": "off",
