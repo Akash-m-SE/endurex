@@ -15,7 +15,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
       >
         Watch
         <span style={{ color: "#FF2625", textTransform: "capitalize" }}>
-          {name}
+          &nbsp;{name}&nbsp;
         </span>
         exercise videos
       </Typography>
